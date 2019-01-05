@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ParkingManger</class>
+ <widget class="QWidget" name="ParkingManger">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VehicleParkingManger</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="Button_car_manger">
+         <property name="text">
+          <string>车辆出入</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_1">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>车辆统计</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>账户设置</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_view">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>车辆进出管理系统</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="managePage">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string>车辆出入管理单元</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QToolBox" name="toolBox">
+           <property name="toolTipDuration">
+            <number>1</number>
+           </property>
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <widget class="QWidget" name="page_inquire">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>353</width>
+              <height>366</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>车辆查询</string>
+            </attribute>
+            <widget class="QPushButton" name="button_car_inquire">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>120</y>
+               <width>89</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>查询</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="formLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>261</width>
+               <height>101</height>
+              </rect>
+             </property>
+             <layout class="QFormLayout" name="car_inquire">
+              <item row="0" column="0">
+               <widget class="QLabel" name="Label_1">
+                <property name="text">
+                 <string>车辆类型：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="cartype_inquire">
+                <item>
+                 <property name="text">
+                  <string>摩托车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>电动三轮车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>小轿车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>面包车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>公交车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>卡车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>挂车</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="Label_2">
+                <property name="text">
+                 <string>车辆品牌：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="carbrand_inquire">
+                <item>
+                 <property name="text">
+                  <string>上海大众</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>广汽本田</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>马自达</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>江铃</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>奥迪</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>奔驰</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>宝马</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="Label_3">
+                <property name="text">
+                 <string>车牌号：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="carnumber_inquire"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QPushButton" name="button_car_all">
+             <property name="geometry">
+              <rect>
+               <x>210</x>
+               <y>120</y>
+               <width>81</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>查询全部</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_in">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>353</width>
+              <height>366</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>车辆驶入</string>
+            </attribute>
+            <widget class="QPushButton" name="button_car_in">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>120</y>
+               <width>89</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>驶入</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="formLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>261</width>
+               <height>101</height>
+              </rect>
+             </property>
+             <layout class="QFormLayout" name="car_in">
+              <item row="0" column="0">
+               <widget class="QLabel" name="Label_4">
+                <property name="text">
+                 <string>车辆类型：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="cartype_in">
+                <item>
+                 <property name="text">
+                  <string>摩托车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>电动三轮车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>小轿车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>面包车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>公交车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>卡车</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>挂车</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="Label_5">
+                <property name="text">
+                 <string>车辆品牌：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="carbrand_in">
+                <item>
+                 <property name="text">
+                  <string>上海大众</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>广汽本田</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>马自达</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>江铃</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>奥迪</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>奔驰</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>宝马</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="Label_6">
+                <property name="text">
+                 <string>车牌号：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="carnumber_in"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_out">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>353</width>
+              <height>366</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>车辆驶出</string>
+            </attribute>
+            <widget class="QPushButton" name="button_car_out">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>50</y>
+               <width>89</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>驶出</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="formLayoutWidget_3">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>261</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QFormLayout" name="car_out">
+              <item row="0" column="0">
+               <widget class="QLabel" name="Label_9">
+                <property name="text">
+                 <string>车牌号：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="carnumber_out"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="list_view"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="analyzePage"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
